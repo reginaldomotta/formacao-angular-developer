@@ -1,0 +1,36 @@
+{
+ "editor.wordWrap": "on",
+ "editor.fontSize": 16,
+ "editor.lineHeight": 30,
+ "editor.tabSize": 2,
+ "editor.fontFamily": "JetBrains Mono",
+ "editor.fontLigatures": true,
+ "editor.bracketPairColorization.enabled": true,
+ "editor.guides.bracketPairs": true,
+ "editor.minimap.enabled": false,
+ "editor.formatOnSave": true,
+ "editor.formatOnPaste": true,
+ "editor.linkedEditing": true,
+ "editor.defaultFormatter": "esbenp.prettier-vscode",
+
+ "workbench.editor.enablePreview": false,
+ "workbench.iconTheme": "material-icon-theme",
+ "workbench.colorTheme": "Omni",
+ "material-icon-theme.folders.associations": {
+  "entities": "Enum"
+ },
+
+ "prettier.enable": true,
+ "prettier.singleQuote": true,
+ "prettier.tabWidth": 1,
+ "prettier.semi": false,
+
+ "terminal.integrated.fontSize": 16,
+ "terminal.integrated.defaultProfile.windows": "Windows PowerShell",
+
+ "files.autoSave": "afterDelay",
+
+ "explorer.compactFolders": false,
+
+ "workbench.startupEditor": "none"
+}
