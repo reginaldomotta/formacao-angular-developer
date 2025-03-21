@@ -1,21 +1,21 @@
 "use strict";
-const xpto = { id: 1, name: 'motta' };
-console.log(xpto);
-function printaObejto(pessoa) {
-    console.log(pessoa);
-}
-printaObejto({
-    name: 'bruce wayne',
-    vulgo: 'batman',
-});
-class Pessoa {
-    constructor(id, name) {
-        this.id = id;
+class Character {
+    constructor(name, stregth, skill) {
         this.name = name;
+        this.stregth = stregth;
+        this.skill = skill;
     }
-    sayHello() {
-        return 'hello';
+    attack() {
+        console.log(`Attack with ${this.stregth} points`);
     }
 }
-const p = new Pessoa(1, 'gutsman');
-console.log(p.sayHello());
+class Magician extends Character {
+    constructor(name, stregth, skill, magicPoints) {
+        super(name, stregth, skill);
+        this.magicPoints = magicPoints;
+    }
+}
+const p1 = new Character('ryu', 10, 98);
+p1.attack();
+const p2 = new Magician('mago', 9, 30, 100);
+console.log(p2);
