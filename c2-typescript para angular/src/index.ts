@@ -5,8 +5,34 @@ function apiVersion(version: string) {
  }
 }
 
-@apiVersion('1.10')
-class API {}
+function minLength(length: number) {
+ return (target: any, key: string) => {
+  let _value = target[key]
 
-const api = new API()
-console.log(api.__version)
+  const getter = () => _value
+  const setter = (value: string) => {
+   if (value.length < length) {
+    throw new Error(`Tamanho menor do que ${length}`)
+   } else {
+    _value = value
+   }
+  }
+
+  Object.defineProperty(target, key, {
+    get: getter,
+    set: setter
+  })
+ }
+}
+
+class API {
+ @minLength(10)
+ name: string
+
+ constructor(name: string) {
+  this.name = name
+ }
+}
+
+const api = new API('agoraemaior')
+console.log(api.name)
